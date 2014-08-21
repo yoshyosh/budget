@@ -15,6 +15,7 @@
 		33C8A69219A4381500A2EAC7 /* BATableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A69119A4381500A2EAC7 /* BATableViewController.swift */; };
 		33C8A69419A43ABE00A2EAC7 /* BAExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A69319A43ABE00A2EAC7 /* BAExpenseTableViewCell.swift */; };
 		33C8A69619A443B700A2EAC7 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A69519A443B700A2EAC7 /* AddExpenseViewController.swift */; };
+		33C8A69819A6510C00A2EAC7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A69719A6510C00A2EAC7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		33C8A69119A4381500A2EAC7 /* BATableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BATableViewController.swift; sourceTree = "<group>"; };
 		33C8A69319A43ABE00A2EAC7 /* BAExpenseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		33C8A69519A443B700A2EAC7 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		33C8A69719A6510C00A2EAC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		33C8A66619A4299700A2EAC7 = {
 			isa = PBXGroup;
 			children = (
+				33C8A69719A6510C00A2EAC7 /* README.md */,
 				33C8A67119A4299800A2EAC7 /* budget */,
 				33C8A68419A4299800A2EAC7 /* budgetTests */,
 				33C8A67019A4299800A2EAC7 /* Products */,
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C8A69819A6510C00A2EAC7 /* README.md in Sources */,
 				33C8A67719A4299800A2EAC7 /* ViewController.swift in Sources */,
 				33C8A69419A43ABE00A2EAC7 /* BAExpenseTableViewCell.swift in Sources */,
 				33C8A69619A443B700A2EAC7 /* AddExpenseViewController.swift in Sources */,
