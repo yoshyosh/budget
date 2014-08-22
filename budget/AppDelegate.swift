@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        Parse.setApplicationId("uLopXLmVCHpM2KiY0eFGDFnb4S6lgdrBqafiuCVT", clientKey: "ccKIz0pEZhEe1wHKaTXn1JoyKg3GYWIzFjiInjkM")
+        
+        //TODO: Use PFInstallation to get current device id and use it as the unique identifier
+        if (PFUser.currentUser() != nil){
+            //User exists
+        } else {
+            var user = PFUser()
+            user.username = "Test User"
+            user.password = "asdf"
+            user.signUpInBackground()
+        }
+        
         return true
     }
 
