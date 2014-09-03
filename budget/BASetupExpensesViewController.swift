@@ -18,6 +18,7 @@ class BASetupExpensesViewController: UIViewController, UITableViewDataSource, UI
 
         // Do any additional setup after loading the view.
         var query = PFQuery(className: "ExpenseCategory")
+        //TODO: check if user already has saved expenses, rather than pulling from the global list
         query.findObjectsInBackgroundWithBlock { (categories: [AnyObject]!, error: NSError!) -> Void in
             if (error == nil) {
                 self.categoryArray = categories as Array
@@ -49,14 +50,24 @@ class BASetupExpensesViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func changeSwitch(sender: UISwitch){
+        var category = self.categoryArray[sender.tag]
         if (sender.on){
             println(sender.tag)
             //function that adds to category array
+            for object in self.savedCategories {
+                if (object == category){
+                    return
+                }
+                self.savedCategories.append(category)
+            }
         } else {
-            println("Switch is off")
-            //function that removes from array
-            //build objects to remove array
-            //build function that removes/deletes from table
+            
+            for (index, object) in enumerate(self.savedCategories) {
+                if (object == category){
+                    //object is already in saved categories remove it
+                    self.savedCategories.removeAtIndex(index)
+                }
+            }
         }
     }
 
@@ -66,14 +77,14 @@ class BASetupExpensesViewController: UIViewController, UITableViewDataSource, UI
             //Need a way to check if we have already added a category, dont want duplicates
             for category in savedCategories {
                 var currentUser = PFUser.currentUser()
-                var query = PFQuery(className: "UserExpenses")
+                var query = PFQuery(className: "Expense")
                 query.whereKey("user", equalTo: currentUser)
                 query.whereKey("expenseCategory", equalTo: category)
                 query.findObjectsInBackgroundWithBlock({ (arrayOfObjects: [AnyObject]!, error: NSError!) -> Void in
                     if (arrayOfObjects.count > 0){
                         // object already exists
                     } else {
-                        var object = PFObject(className: "UserExpenses")
+                        var object = PFObject(className: "Expense")
                         object["user"] = PFUser.currentUser()
                         object["expenseCategory"] = category
                         object.saveInBackground()

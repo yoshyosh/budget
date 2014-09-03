@@ -22,11 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (PFUser.currentUser() != nil){
             //User exists
         } else {
-            var user = PFUser()
-            user.username = "Test User"
-            user.password = "asdf"
-            user.signUpInBackground()
+            PFAnonymousUtils.logInWithBlock({ (user: PFUser!, error: NSError!) -> Void in
+                if (error != nil ){
+                    NSLog("login failed")
+                } else {
+                    NSLog("anon user logged in")
+                }
+            })
         }
+        
+        //TODO: Add navigation controller
+//        self.window?.rootViewController = self.window?.rootViewController.storyboard.instantiateViewControllerWithIdentifier("MainViewController") as UITableViewController
         
         return true
     }

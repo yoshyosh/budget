@@ -9,7 +9,10 @@
 import UIKit
 
 class AddExpenseViewController: UIViewController {
-
+    @IBOutlet weak var expenseInputField: UITextField!
+    @IBOutlet weak var paymentType: UISegmentedControl!
+    var expenseCategory: PFObject!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +40,12 @@ class AddExpenseViewController: UIViewController {
     }
 
     @IBAction func submitButtonDidPress(sender: AnyObject) {
+        var userPaymentInput = (expenseInputField.text as NSString).floatValue
+        var payment = PFObject(className: "Payment")
+        payment["amount"] = userPaymentInput
+        payment["payType"] = paymentType.selectedSegmentIndex
+        payment["expense"] = expenseCategory
+        payment.saveInBackground()
         [self .dismissViewControllerAnimated(true, completion: nil)]
     }
 

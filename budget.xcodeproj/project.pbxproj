@@ -30,6 +30,9 @@
 		33C8A6B619A66B5A00A2EAC7 /* BASetupExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A6B519A66B5A00A2EAC7 /* BASetupExpensesViewController.swift */; };
 		33C8A6BA19A684A100A2EAC7 /* SetupExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A6B919A684A100A2EAC7 /* SetupExpenseTableViewCell.swift */; };
 		33C8A6BC19A69DAC00A2EAC7 /* BASetupSalaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A6BB19A69DAC00A2EAC7 /* BASetupSalaryViewController.swift */; };
+		33C8A6BE19A6C0FD00A2EAC7 /* BASetupBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A6BD19A6C0FD00A2EAC7 /* BASetupBudgetViewController.swift */; };
+		33C8A6C019A6E3F300A2EAC7 /* BABudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A6BF19A6E3F300A2EAC7 /* BABudgetTableViewCell.swift */; };
+		33C8A6C319A6ECBC00A2EAC7 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8A6C219A6ECBC00A2EAC7 /* Expenses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		33C8A6B519A66B5A00A2EAC7 /* BASetupExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASetupExpensesViewController.swift; sourceTree = "<group>"; };
 		33C8A6B919A684A100A2EAC7 /* SetupExpenseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		33C8A6BB19A69DAC00A2EAC7 /* BASetupSalaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASetupSalaryViewController.swift; sourceTree = "<group>"; };
+		33C8A6BD19A6C0FD00A2EAC7 /* BASetupBudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASetupBudgetViewController.swift; sourceTree = "<group>"; };
+		33C8A6BF19A6E3F300A2EAC7 /* BABudgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BABudgetTableViewCell.swift; sourceTree = "<group>"; };
+		33C8A6C219A6ECBC00A2EAC7 /* Expenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 		33C8A67119A4299800A2EAC7 /* budget */ = {
 			isa = PBXGroup;
 			children = (
+				33C8A6C119A6EC9300A2EAC7 /* Model */,
 				33C8A67419A4299800A2EAC7 /* AppDelegate.swift */,
 				33C8A67819A4299800A2EAC7 /* Main.storyboard */,
 				33C8A6B719A66B6F00A2EAC7 /* ViewController */,
@@ -185,9 +192,10 @@
 			children = (
 				33C8A69519A443B700A2EAC7 /* AddExpenseViewController.swift */,
 				33C8A67619A4299800A2EAC7 /* ViewController.swift */,
-				33C8A6B519A66B5A00A2EAC7 /* BASetupExpensesViewController.swift */,
 				33C8A69119A4381500A2EAC7 /* BATableViewController.swift */,
+				33C8A6B519A66B5A00A2EAC7 /* BASetupExpensesViewController.swift */,
 				33C8A6BB19A69DAC00A2EAC7 /* BASetupSalaryViewController.swift */,
+				33C8A6BD19A6C0FD00A2EAC7 /* BASetupBudgetViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -195,10 +203,19 @@
 		33C8A6B819A66B7E00A2EAC7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33C8A6BF19A6E3F300A2EAC7 /* BABudgetTableViewCell.swift */,
 				33C8A6B919A684A100A2EAC7 /* SetupExpenseTableViewCell.swift */,
 				33C8A69319A43ABE00A2EAC7 /* BAExpenseTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		33C8A6C119A6EC9300A2EAC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33C8A6C219A6ECBC00A2EAC7 /* Expenses.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C8A6C319A6ECBC00A2EAC7 /* Expenses.swift in Sources */,
 				33C8A69819A6510C00A2EAC7 /* README.md in Sources */,
 				33C8A67719A4299800A2EAC7 /* ViewController.swift in Sources */,
 				33C8A69419A43ABE00A2EAC7 /* BAExpenseTableViewCell.swift in Sources */,
@@ -307,7 +325,9 @@
 				33C8A69619A443B700A2EAC7 /* AddExpenseViewController.swift in Sources */,
 				33C8A6B619A66B5A00A2EAC7 /* BASetupExpensesViewController.swift in Sources */,
 				33C8A69219A4381500A2EAC7 /* BATableViewController.swift in Sources */,
+				33C8A6C019A6E3F300A2EAC7 /* BABudgetTableViewCell.swift in Sources */,
 				33C8A6BA19A684A100A2EAC7 /* SetupExpenseTableViewCell.swift in Sources */,
+				33C8A6BE19A6C0FD00A2EAC7 /* BASetupBudgetViewController.swift in Sources */,
 				33C8A67519A4299800A2EAC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

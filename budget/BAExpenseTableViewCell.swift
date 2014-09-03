@@ -11,6 +11,7 @@ import UIKit
 class BAExpenseTableViewCell: UITableViewCell {
     @IBOutlet weak var expenseTitle: UILabel!
     @IBOutlet weak var expenseButton: UIButton!
+    @IBOutlet weak var expenseSubtitle: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
